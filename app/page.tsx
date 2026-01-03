@@ -35,46 +35,62 @@ const HeroSection = () => {
   );
 };
 
-const AboutSection = () => {
-  return (
-    <section id="about" className="py-24 lg:py-32 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="text-sm uppercase tracking-widest text-muted mb-4">
-              О нас
+const AboutSection = () => (
+  <section id="about" className="py-24 lg:py-32 bg-gray-50">
+    <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p className="text-sm uppercase tracking-widest text-muted mb-4">
+            О нас
+          </p>
+          <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            20 лет в текстильном дизайне интерьеров
+          </h2>
+          <div className="space-y-6 text-lg leading-relaxed text-muted">
+            <p>
+              20 лет мы занимаемся текстильным оформлением интерьеров, используя
+              свою дизайнерскую и производственную базы. За это время был
+              накоплен колоссальный опыт, которым мы готовы делиться с каждым
+              нашим клиентом.
             </p>
-            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              20 лет в текстильном дизайне интерьеров
-            </h2>
-            <div className="space-y-6 text-lg leading-relaxed text-muted">
-              <p>
-                Наш салон объединяет собственное дизайнерское и производственное
-                направление. Это позволяет нам осуществлять полный цикл работ по
-                текстильному оформлению интерьеров.
-              </p>
-              <p>
-                Мы работаем с каждым клиентом индивидуально, уделяя внимание
-                деталям, которые отличают нашу работу от конкурентов. Качество и
-                внимание к каждому проекту — наши главные приоритеты.
-              </p>
-            </div>
-          </div>
-
-          <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-            <Image
-              src="/images/featured/vpQw0GUsdlA.jpg"
-              alt="Работы салона римские шторы"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
+            <p>
+              Уникальный авторский подход в работе с клиентами направлен на
+              достижение главной цели : &quot;Заказчик полностью доволен&quot;.
+              Чуткое отношение к мелочам дает возможность отличать наши изделия
+              от работ конкурентов.
+            </p>
+            <p>
+              В нашем салоне собраны ткани со всего мира разнообразные по стилю
+              и стоимости. Инженерное сопровождение проектов, арсенал
+              профессиональных карнизов, таких как профильные и
+              электроуправляемые, позволяет добиваться максимального результата
+              не только с эстетической, но и технической стороны.
+            </p>
+            <p>
+              Собственное производство с опытными мастерами и технологии,
+              разработанные с учетом европейских традиций и российских
+              особенностей, помогают создавать самые сложные проекты.
+            </p>
+            <p>
+              Мы осуществляем полный цикл услуг: разработка проекта, пошив
+              изделий, монтаж карнизных и солнце защитных систем.
+            </p>
           </div>
         </div>
+
+        <div className="relative aspect-4/3 overflow-hidden rounded-lg">
+          <Image
+            src="/images/featured/vpQw0GUsdlA.jpg"
+            alt="Работы салона римские шторы"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </div>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 const ServicesSection = () => {
   const services = [
@@ -203,7 +219,7 @@ const ContactSection = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12 mb-12">
           <div>
             <ContactForm />
           </div>
@@ -259,6 +275,19 @@ const ContactSection = () => {
                 </a>
               </p>
             </div>
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <h3 className="text-lg font-bold mb-4">Как нас найти</h3>
+          <div className="w-full h-100 rounded-lg overflow-hidden">
+            <iframe
+              src="https://yandex.com/map-widget/v1/?um=constructor%3Aa4a27257b0b4971a32170042c0f44e7106dcbc05b134bdca4a1de3ea0952276c&amp;source=constructor"
+              width="100%"
+              height="400"
+              className="w-full h-full"
+              title="Карта расположения салона Римские Шторы"
+            />
           </div>
         </div>
       </div>
@@ -323,7 +352,7 @@ const Footer = () => {
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-16">
       <HeroSection />
       <AboutSection />
       <ServicesSection />
