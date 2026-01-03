@@ -78,9 +78,9 @@ const AboutSection = () => (
           </div>
         </div>
 
-        <div className="relative aspect-4/3 overflow-hidden rounded-lg">
+        <div className="relative aspect-3/4 overflow-hidden rounded-lg">
           <Image
-            src="/images/featured/vpQw0GUsdlA.jpg"
+            src="/images/featured/2yGhM8p7mJA.jpg"
             alt="Работы салона римские шторы"
             fill
             className="object-cover"
