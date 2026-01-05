@@ -56,8 +56,6 @@ bun run start
 bun run lint
 ```
 
-**Note**: All Next.js commands are configured with `bun --bun` flag for optimal Bun compatibility.
-
 ## Project Structure
 
 ```
@@ -84,133 +82,11 @@ romanshtor-site/
 └── package.json          # Project dependencies
 ```
 
-### Architecture Overview
+## Planed Features
 
-**Single-Page Application**: All content sections are defined in `app/page.tsx` (365 lines)
-
-**Path Alias**: `@/*` → project root (configured in `tsconfig.json`)
-```typescript
-import Header from "@/components/Header"
-```
-
-## Component Architecture
-
-### Page Sections (app/page.tsx)
-
-The main page consists of 7 functional sections:
-
-1. **HeroSection** - Full-height hero with background image and call-to-action
-2. **AboutSection** - Company description with side image (2-column grid layout)
-3. **ServicesSection** - 4-column responsive grid of service categories
-4. **ProcessSection** - 5-step numbered workflow visualization
-5. **PortfolioGallery** - Photo gallery component (imported)
-6. **ContactSection** - Contact form, Yandex Maps embed, business information
-7. **Footer** - Copyright and legal information
-
-### Reusable Components
-
-#### Header.tsx
-- **Type**: Client Component (`'use client'`)
-- **Features**: Fixed sticky navigation with mobile hamburger menu
-- **State**: Uses React useState for menu toggle
-- **Navigation**: Smooth scroll links to page sections
-- **Contact**: Phone and WhatsApp integration
-
-#### ContactForm.tsx
-- **Type**: Client Component (`'use client'`)
-- **Fields**: Name, Email, Phone
-- **Validation**: Email format check, phone length validation
-- **Feedback**: Success message with 3-second auto-reset
-- **Note**: Client-side only (no backend submission endpoint)
-
-#### PortfolioGallery.tsx
-- **Type**: Server Component
-- **Content**: 18 portfolio images in responsive grid
-- **Layout**: 2-4 columns based on screen size
-- **Effects**: Hover scale animations
-- **Optimization**: Uses Next.js `<Image>` component
-
-### Client vs Server Components
-
-- **Server Components** (default): All static content sections
-- **Client Components** (marked with `'use client'`):
-  - `Header.tsx` - uses useState for mobile menu
-  - `ContactForm.tsx` - uses useState for form state/validation
-
-## Styling Guide
-
-### Tailwind CSS v4 Setup
-
-- **Configuration**: PostCSS-based (`postcss.config.mjs`)
-- **Theme Definition**: Custom variables in `app/globals.css`
-- **Approach**: Utility-first CSS with custom design tokens
-
-### Custom Theme Variables
-
-```css
---background: #ffffff
---foreground: #171717
---color-primary: #1a1a1a
---color-accent: #d4a373    /* Gold/bronze accent */
---color-muted: #57606a
-```
-
-### Typography
-
-- **Primary Font**: Geist Sans (loaded via `next/font`)
-- **Monospace Font**: Geist Mono
-- **Fallbacks**: System fonts (-apple-system, Segoe UI, Arial)
-
-### Responsive Design
-
-**Mobile-First Approach** using Tailwind breakpoints:
-- **Grid Layouts**: 1 column (mobile) → 2-4 columns (desktop)
-- **Navigation**: Hamburger menu on mobile, full menu on desktop
-- **Images**: Responsive sizing with Next.js Image optimization
-- **Smooth Scroll**: Enabled globally via CSS
-
-### Image Optimization
-
-- **Component**: All images use Next.js `<Image>` component
-- **Benefits**: Automatic optimization, responsive sizing, lazy loading
-- **Organization**: Assets organized by section in `/public/images/`
-
-## Development Notes
-
-### Important Considerations
-
-- **Language**: All content in Russian (maintain for SEO/UX consistency)
-- **Architecture**: Static frontend only - no backend or API routes
-- **Form Handling**: Contact form is client-side only (no submission endpoint)
-- **Maps**: Uses Yandex Maps (Russian market preference)
-- **Environment**: No environment variables required
-- **Version Control**: Current branch is `master`
-
-### Code Patterns
-
-**Import Pattern** with path alias:
-```typescript
-import Component from "@/components/Component"
-```
-
-**Component Pattern**:
-```typescript
-// Server component (default)
-export default function Section() { ... }
-
-// Client component (interactive)
-'use client'
-export default function Interactive() { ... }
-```
-
-## ESLint Configuration
-
-- **Version**: ESLint 9 with flat config format
-- **Config File**: `eslint.config.mjs`
-- **Preset**: Next.js core-web-vitals rules
-- **Ignored Paths**: `.next/`, `out/`, `build/`, `next-env.d.ts`
-
-## Browser Support
-
-Targets modern browsers with ES6+ support. Next.js handles automatic polyfills and optimizations.
-
+- [ ] Section "Наши истории/проекты"
+- [ ] Update section Process - make interactive UI with pictures
+- [ ] In Portfolio section add filter and picture view (full screen)
+- [ ] Add section "Our team"
+- [ ] Rework Услуги section 
+- [ ] Add social media links
