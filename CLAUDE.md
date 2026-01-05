@@ -44,7 +44,7 @@ This is a **single-page landing site** with a section-based architecture. All ma
 3. **ServicesSection** - 4-column grid of service categories
 4. **ProcessSection** - 5-step numbered workflow
 5. **PortfolioGallery** - Photo gallery (imported component)
-6. **ContactSection** - Contact form, map embed, business info
+6. **ContactSection** - Contact information cards, map embed
 7. **Footer** - Copyright and legal information
 
 ### Component Architecture
@@ -57,12 +57,6 @@ This is a **single-page landing site** with a section-based architecture. All ma
   - Desktop navigation with smooth scroll links
   - Contact links (phone, WhatsApp)
   - Uses React useState for menu toggle
-
-- **ContactForm.tsx** - Contact form with validation
-  - Client component
-  - Fields: Name, Email, Phone
-  - Email format and phone length validation
-  - Success feedback with 3-second auto-reset
 
 - **PortfolioGallery.tsx** - Image gallery
   - 18 portfolio images in responsive grid (2-4 columns)
@@ -111,7 +105,6 @@ Always use Next.js `<Image>` component for optimal performance.
 - **Default**: All components are Server Components (static content)
 - **Client Components** (marked with `'use client'`):
   - `Header.tsx` - uses useState for mobile menu
-  - `ContactForm.tsx` - uses useState for form state and validation
   - Any component using React hooks, browser APIs, or interactivity
 
 ## Language and Content
@@ -132,5 +125,5 @@ Uses ESLint 9 with flat config (`eslint.config.mjs`):
 - **Current branch**: master (no other branches configured)
 - **No environment variables** in use (no .env file)
 - **No backend/API routes** - purely static frontend
-- **Contact form** is client-side only (no actual submission endpoint)
+- **Contact display** uses static cards with phone, email, and WhatsApp links
 - **Map integration**: Uses Yandex Maps embed (Russian map service)

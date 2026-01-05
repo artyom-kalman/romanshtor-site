@@ -49,7 +49,7 @@ export default function Header() {
               href="tel:+74212454154"
               className="text-sm font-medium text-gray-700 hover:text-accent transition-colors"
             >
-              (4212) 45-41-54
+              45-41-54
             </a>
             <a
               href="https://wa.me/79141903086"
@@ -104,7 +104,7 @@ export default function Header() {
                   href="tel:+74212454154"
                   className="text-base font-medium text-gray-700 hover:text-accent transition-colors"
                 >
-                  (4212) 45-41-54
+                  45-41-54
                 </a>
                 <a
                   href="https://wa.me/79141903086"

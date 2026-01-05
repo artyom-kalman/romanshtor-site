@@ -15,7 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Салон Римские Шторы - Хабаровск",
-  description: "Текстильное оформление интерьеров. 20 лет опыта. Дизайн и производство.",
+  description:
+    "Текстильное оформление интерьеров. 20 лет опыта. Дизайн и производство.",
 };
 
 export default function RootLayout({

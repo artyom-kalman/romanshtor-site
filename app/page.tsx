@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ContactForm from "@/components/ContactForm";
 import PortfolioGallery from "@/components/PortfolioGallery";
 
 const HeroSection = () => {
@@ -28,7 +27,7 @@ const HeroSection = () => {
         </h1>
         <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
           Текстильное оформление частных и коммерческих интерьеров на высоком
-          дизайнерском и инженерном уровне.
+          дизайнерском и инженерном уровне
         </p>
       </div>
     </section>
@@ -219,39 +218,69 @@ const ContactSection = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 mb-12">
-          <div>
-            <ContactForm />
-          </div>
-
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-lg font-bold mb-2">Адрес</h3>
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          {/* Left Column - Contact Information Cards */}
+          <div className="space-y-6">
+            {/* Address Card */}
+            <div className="p-6 border border-gray-200 rounded-lg hover:border-accent transition-colors">
+              <h3 className="text-xl font-bold mb-2">Адрес</h3>
               <p className="text-muted">г. Хабаровск, ул. Гамарника, д. 43а</p>
             </div>
 
-            <div>
-              <h3 className="text-lg font-bold mb-2">Телефоны</h3>
-              <p className="text-muted">
-                <a
-                  href="tel:+74212454154"
-                  className="hover:text-accent transition-colors"
-                >
-                  (4212) 45-41-54
-                </a>
-              </p>
-              <p className="text-muted">
-                <a
-                  href="tel:+79141903086"
-                  className="hover:text-accent transition-colors"
-                >
-                  +7 914 190 3086
-                </a>
-              </p>
+            {/* Messengers Card */}
+            <div className="p-6 border border-gray-200 rounded-lg hover:border-accent transition-colors">
+              <h3 className="text-xl font-bold mb-2">Мессенджеры</h3>
+              <div className="space-y-2">
+                <p className="text-muted">
+                  WhatsApp:{" "}
+                  <a
+                    href="https://wa.me/79141903086"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent transition-colors"
+                  >
+                    +7 914 190 3086
+                  </a>
+                </p>
+                <p className="text-muted">
+                  Telegram:{" "}
+                  <a
+                    href="https://t.me/+79141903086"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent transition-colors"
+                  >
+                    +7 914 190 3086
+                  </a>
+                </p>
+              </div>
+            </div>
+            {/* Phones Card */}
+            <div className="p-6 border border-gray-200 rounded-lg hover:border-accent transition-colors">
+              <h3 className="text-xl font-bold mb-2">Телефоны</h3>
+              <div className="space-y-2">
+                <p className="text-muted">
+                  <a
+                    href="tel:+74212454154"
+                    className="hover:text-accent transition-colors"
+                  >
+                    (4212) 45-41-54
+                  </a>
+                </p>
+                <p className="text-muted">
+                  <a
+                    href="tel:+79141903086"
+                    className="hover:text-accent transition-colors"
+                  >
+                    +7 914 190 3086
+                  </a>
+                </p>
+              </div>
             </div>
 
-            <div>
-              <h3 className="text-lg font-bold mb-2">Email</h3>
+            {/* Email Card */}
+            <div className="p-6 border border-gray-200 rounded-lg hover:border-accent transition-colors">
+              <h3 className="text-xl font-bold mb-2">Email</h3>
               <p className="text-muted">
                 <a
                   href="mailto:romanshtor@rambler.ru"
@@ -261,33 +290,19 @@ const ContactSection = () => {
                 </a>
               </p>
             </div>
-
-            <div>
-              <h3 className="text-lg font-bold mb-2">WhatsApp</h3>
-              <p className="text-muted">
-                <a
-                  href="https://wa.me/79141903086"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-accent transition-colors"
-                >
-                  +7 914 190 3086
-                </a>
-              </p>
-            </div>
           </div>
-        </div>
 
-        <div className="mt-12">
-          <h3 className="text-lg font-bold mb-4">Как нас найти</h3>
-          <div className="w-full h-100 rounded-lg overflow-hidden">
-            <iframe
-              src="https://yandex.com/map-widget/v1/?um=constructor%3Aa4a27257b0b4971a32170042c0f44e7106dcbc05b134bdca4a1de3ea0952276c&amp;source=constructor"
-              width="100%"
-              height="400"
-              className="w-full h-full"
-              title="Карта расположения салона Римские Шторы"
-            />
+          {/* Right Column - Map */}
+          <div className="h-full">
+            <div className="w-full h-full rounded-lg overflow-hidden border border-gray-200">
+              <iframe
+                src="https://yandex.com/map-widget/v1/?um=constructor%3Aa4a27257b0b4971a32170042c0f44e7106dcbc05b134bdca4a1de3ea0952276c&amp;source=constructor"
+                width="100%"
+                height="100%"
+                className="w-full h-full"
+                title="Карта расположения салона Римские Шторы"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -315,7 +330,7 @@ const Footer = () => {
                   href="tel:+74212454154"
                   className="hover:text-white transition-colors"
                 >
-                  (4212) 45-41-54
+                  45-41-54
                 </a>
               </p>
               <p>
