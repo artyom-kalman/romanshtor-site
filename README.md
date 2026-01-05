@@ -21,7 +21,7 @@ This is a **single-page landing site** built with modern web technologies to sho
 - Service catalog with 4 main categories
 - 5-step process workflow visualization
 - Portfolio gallery with 18 project images
-- Contact form with validation
+- Contact information cards with map integration
 - Yandex Maps integration
 - Fully responsive design
 
@@ -67,7 +67,6 @@ romanshtor-site/
 │   └── favicon.ico       # Site favicon
 ├── components/
 │   ├── Header.tsx        # Navigation header (client component)
-│   ├── ContactForm.tsx   # Contact form with validation
 │   └── PortfolioGallery.tsx  # Image gallery component
 ├── public/
 │   └── images/
