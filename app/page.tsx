@@ -227,6 +227,34 @@ const ContactSection = () => {
               <p className="text-muted">г. Хабаровск, ул. Гамарника, д. 43а</p>
             </div>
 
+            {/* Messengers Card */}
+            <div className="p-6 border border-gray-200 rounded-lg hover:border-accent transition-colors">
+              <h3 className="text-xl font-bold mb-2">Мессенджеры</h3>
+              <div className="space-y-2">
+                <p className="text-muted">
+                  WhatsApp:{" "}
+                  <a
+                    href="https://wa.me/79141903086"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent transition-colors"
+                  >
+                    +7 914 190 3086
+                  </a>
+                </p>
+                <p className="text-muted">
+                  Telegram:{" "}
+                  <a
+                    href="https://t.me/+79141903086"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent transition-colors"
+                  >
+                    +7 914 190 3086
+                  </a>
+                </p>
+              </div>
+            </div>
             {/* Phones Card */}
             <div className="p-6 border border-gray-200 rounded-lg hover:border-accent transition-colors">
               <h3 className="text-xl font-bold mb-2">Телефоны</h3>
@@ -262,32 +290,16 @@ const ContactSection = () => {
                 </a>
               </p>
             </div>
-
-            {/* WhatsApp Card */}
-            <div className="p-6 border border-gray-200 rounded-lg hover:border-accent transition-colors">
-              <h3 className="text-xl font-bold mb-2">WhatsApp</h3>
-              <p className="text-muted">
-                <a
-                  href="https://wa.me/79141903086"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-accent transition-colors"
-                >
-                  +7 914 190 3086
-                </a>
-              </p>
-            </div>
           </div>
 
           {/* Right Column - Map */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Как нас найти</h3>
-            <div className="w-full rounded-lg overflow-hidden border border-gray-200">
+          <div className="h-full">
+            <div className="w-full h-full rounded-lg overflow-hidden border border-gray-200">
               <iframe
                 src="https://yandex.com/map-widget/v1/?um=constructor%3Aa4a27257b0b4971a32170042c0f44e7106dcbc05b134bdca4a1de3ea0952276c&amp;source=constructor"
                 width="100%"
-                height="500"
-                className="w-full"
+                height="100%"
+                className="w-full h-full"
                 title="Карта расположения салона Римские Шторы"
               />
             </div>
@@ -318,7 +330,7 @@ const Footer = () => {
                   href="tel:+74212454154"
                   className="hover:text-white transition-colors"
                 >
-                  (4212) 45-41-54
+                  45-41-54
                 </a>
               </p>
               <p>
