@@ -28,7 +28,7 @@ const HeroSection = () => {
         </h1>
         <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
           Текстильное оформление частных и коммерческих интерьеров на высоком
-          дизайнерском и инженерном уровне.
+          дизайнерском и инженерном уровне
         </p>
       </div>
     </section>
