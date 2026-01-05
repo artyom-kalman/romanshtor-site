@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative h-[calc(100dvh-4rem)] flex items-center justify-center overflow-hidden"
     >
       <div className="absolute inset-0 z-0">
         <Image
