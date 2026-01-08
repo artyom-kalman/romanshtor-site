@@ -1,6 +1,7 @@
 import Image from "next/image";
 import PortfolioGallery from "@/components/PortfolioGallery";
 import ContactSection from "@/components/ContactSection";
+import StoriesCarousel from "@/components/StoriesCarousel";
 
 const HeroSection = () => {
   return (
@@ -268,6 +269,7 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <ProcessSection />
+      <StoriesCarousel />
       <PortfolioGallery />
       <ContactSection />
       <Footer />

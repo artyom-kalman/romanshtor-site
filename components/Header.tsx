@@ -10,6 +10,7 @@ export default function Header() {
     { name: "О нас", href: "#about" },
     { name: "Услуги", href: "#services" },
     { name: "Процесс", href: "#process" },
+    { name: "Истории", href: "#stories" },
     { name: "Портфолио", href: "#portfolio" },
     { name: "Контакты", href: "#contact" },
   ];
