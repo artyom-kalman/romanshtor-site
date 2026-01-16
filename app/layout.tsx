@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "Салон Римские Шторы - Хабаровск",
   description:
     "Текстильное оформление интерьеров. 20 лет опыта. Дизайн и производство.",
+  other: {
+    "yandex-verification": "5a518f6c7902e9c1",
+  },
 };
 
 export default function RootLayout({
