@@ -12,7 +12,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero/3_pL8NMeWWk_2.jpg"
-          alt="Римские шторы"
+          alt="Купить римские шторы в Хабаровске — салон Римские Шторы"
           fill
           className="object-cover brightness-50"
           priority
@@ -97,7 +97,7 @@ const AboutSection = () => (
           <div className="relative aspect-3/4 overflow-hidden rounded-lg">
             <Image
               src="/images/featured/2yGhM8p7mJA.jpg"
-              alt="Работы салона римские шторы"
+              alt="Пошив штор на заказ в Хабаровске — салон текстильного дизайна"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"

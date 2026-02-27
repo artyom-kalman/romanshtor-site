@@ -3,8 +3,9 @@ export default function JsonLd() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Салон Римские Шторы",
+    alternateName: "Центр декора окон",
     description:
-      "Текстильное оформление интерьеров в Хабаровске. Римские шторы, портьеры, солнцезащитные системы, дизайн и пошив текстиля на заказ. Более 20 лет опыта.",
+      "Купить римские шторы в Хабаровске. Пошив штор и гардин на заказ, карнизы, тюль, солнцезащитные системы. Салон с 20-летним опытом — дизайн, пошив, навеска и монтаж.",
     url: "https://rimskiestory.ru",
     telephone: ["+7 (4212) 20-65-53", "+7 (924) 205-47-44"],
     email: "info@rimskiestory.ru",
@@ -21,7 +22,7 @@ export default function JsonLd() {
     ],
     address: {
       "@type": "PostalAddress",
-      streetAddress: "ул. Гамарника, д. 43а",
+      streetAddress: "ул. Гамарника, д. 43а (рядом с ул. Ленина)",
       addressLocality: "Хабаровск",
       addressRegion: "Хабаровский край",
       postalCode: "680000",
@@ -82,6 +83,50 @@ export default function JsonLd() {
             name: "Текстильное оформление интерьеров",
             description:
               "Комплексное текстильное оформление квартир, домов и офисов",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Карнизы",
+            description:
+              "Профильные и электроуправляемые карнизы — купить в Хабаровске",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Тюль",
+            description: "Тюль и гардины — большой выбор тканей в Хабаровске",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Пошив штор на заказ",
+            description:
+              "Пошив римских штор, портьер и гардин на заказ в Хабаровске",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Навеска и монтаж штор",
+            description:
+              "Профессиональная навеска гардин и монтаж карнизных систем",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Декор окон",
+            description:
+              "Комплексный декор окон — дизайн, подбор тканей, пошив и установка",
           },
         },
       ],
