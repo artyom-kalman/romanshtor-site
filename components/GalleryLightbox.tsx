@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useCallback, useRef } from "react";
 
 interface GalleryLightboxProps {
-  images: { filename: string; alt: string }[];
+  images: { filename: string; alt: string; caption?: string }[];
   activeIndex: number;
   onClose: () => void;
   onPrev: () => void;
@@ -109,19 +109,26 @@ export default function GalleryLightbox({
         </svg>
       </button>
 
-      {/* Image */}
+      {/* Image + Caption */}
       <div
-        className="relative w-full max-w-5xl mx-16 aspect-[4/3]"
+        className="relative w-full max-w-5xl mx-16 flex flex-col items-center"
         onClick={(e) => e.stopPropagation()}
       >
-        <Image
-          src={`/images/gallery/${image.filename}`}
-          alt={image.alt}
-          fill
-          className="object-contain"
-          sizes="90vw"
-          priority
-        />
+        <div className="relative w-full aspect-[4/3]">
+          <Image
+            src={`/images/gallery/${image.filename}`}
+            alt={image.alt}
+            fill
+            className="object-contain"
+            sizes="90vw"
+            priority
+          />
+        </div>
+        {image.caption && (
+          <p className="mt-4 text-white/80 text-sm text-center max-w-lg">
+            {image.caption}
+          </p>
+        )}
       </div>
 
       {/* Next button */}
