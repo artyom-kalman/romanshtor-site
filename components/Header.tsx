@@ -7,10 +7,10 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navigation = [
-    { name: "О нас", href: "#founder" },
-    { name: "Проекты", href: "#projects" },
+    { name: "О нас", href: "#about" },
     { name: "Услуги", href: "#services" },
-    { name: "Галерея", href: "#gallery" },
+    { name: "Процесс", href: "#process" },
+    { name: "Портфолио", href: "#portfolio" },
     { name: "Контакты", href: "#contact" },
   ];
 
