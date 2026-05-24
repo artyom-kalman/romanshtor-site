@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { reachGoal } from "@/lib/yandexMetrica";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -47,6 +48,12 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-4">
             <a
               href="tel:+74212454154"
+              onClick={() =>
+                reachGoal("phone_click", {
+                  phone: "+74212454154",
+                  location: "header",
+                })
+              }
               className="text-sm font-medium text-gray-700 hover:text-accent transition-colors"
             >
               45-41-54
@@ -55,6 +62,7 @@ export default function Header() {
               href="https://wa.me/79141903086"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => reachGoal("whatsapp_click", { location: "header" })}
               className="px-4 py-2 text-sm font-medium text-white bg-accent hover:bg-accent/90 rounded-lg transition-colors"
             >
               WhatsApp
@@ -102,6 +110,12 @@ export default function Header() {
               <div className="pt-4 border-t border-gray-200 flex flex-col space-y-3">
                 <a
                   href="tel:+74212454154"
+                  onClick={() =>
+                    reachGoal("phone_click", {
+                      phone: "+74212454154",
+                      location: "header",
+                    })
+                  }
                   className="text-base font-medium text-gray-700 hover:text-accent transition-colors"
                 >
                   45-41-54
@@ -110,6 +124,9 @@ export default function Header() {
                   href="https://wa.me/79141903086"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() =>
+                    reachGoal("whatsapp_click", { location: "header" })
+                  }
                   className="inline-block px-4 py-2 text-sm font-medium text-white bg-accent hover:bg-accent/90 rounded-lg transition-colors text-center"
                 >
                   WhatsApp
