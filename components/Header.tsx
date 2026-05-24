@@ -1,6 +1,5 @@
 "use client";
 
-import { track } from "@vercel/analytics";
 import { useState } from "react";
 
 export default function Header() {
@@ -49,9 +48,6 @@ export default function Header() {
             <a
               href="tel:+74212454154"
               className="text-sm font-medium text-gray-700 hover:text-accent transition-colors"
-              onClick={() => {
-                track("phone_link_clicked", { phone: "+74212454154", location: "header" });
-              }}
             >
               45-41-54
             </a>
@@ -60,9 +56,6 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 text-sm font-medium text-white bg-accent hover:bg-accent/90 rounded-lg transition-colors"
-              onClick={() => {
-                track("whatsapp_link_clicked", { location: "header" });
-              }}
             >
               WhatsApp
             </a>
@@ -110,9 +103,6 @@ export default function Header() {
                 <a
                   href="tel:+74212454154"
                   className="text-base font-medium text-gray-700 hover:text-accent transition-colors"
-                  onClick={() => {
-                    track("phone_link_clicked", { phone: "+74212454154", location: "header" });
-                  }}
                 >
                   45-41-54
                 </a>
@@ -121,9 +111,6 @@ export default function Header() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block px-4 py-2 text-sm font-medium text-white bg-accent hover:bg-accent/90 rounded-lg transition-colors text-center"
-                  onClick={() => {
-                    track("whatsapp_link_clicked", { location: "header" });
-                  }}
                 >
                   WhatsApp
                 </a>

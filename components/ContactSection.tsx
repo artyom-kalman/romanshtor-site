@@ -1,6 +1,3 @@
-"use client";
-import { track } from "@vercel/analytics";
-
 export default function ContactSection() {
   return (
     <section id="contact" className="py-24 lg:py-32 bg-white">
@@ -34,11 +31,6 @@ export default function ContactSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-accent transition-colors"
-                    onClick={() => {
-                      track("whatsapp_link_clicked", {
-                        location: "contact_section",
-                      });
-                    }}
                   >
                     +7 914 190 3086
                   </a>
@@ -50,11 +42,6 @@ export default function ContactSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-accent transition-colors"
-                    onClick={() => {
-                      track("telegram_link_clicked", {
-                        location: "contact_section",
-                      });
-                    }}
                   >
                     +7 914 190 3086
                   </a>
@@ -69,12 +56,6 @@ export default function ContactSection() {
                   <a
                     href="tel:+74212454154"
                     className="hover:text-accent transition-colors"
-                    onClick={() => {
-                      track("phone_link_clicked", {
-                        phone: "+74212454154",
-                        location: "contact_section",
-                      });
-                    }}
                   >
                     (4212) 45-41-54
                   </a>
@@ -83,12 +64,6 @@ export default function ContactSection() {
                   <a
                     href="tel:+79141903086"
                     className="hover:text-accent transition-colors"
-                    onClick={() => {
-                      track("phone_link_clicked", {
-                        phone: "+79141903086",
-                        location: "contact_section",
-                      });
-                    }}
                   >
                     +7 914 190 3086
                   </a>
@@ -103,9 +78,6 @@ export default function ContactSection() {
                 <a
                   href="mailto:romanshtor@rambler.ru"
                   className="hover:text-accent transition-colors"
-                  onClick={() => {
-                    track("email_link_clicked");
-                  }}
                 >
                   romanshtor@rambler.ru
                 </a>
