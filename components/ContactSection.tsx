@@ -1,7 +1,3 @@
-"use client";
-
-import { reachGoal } from "@/lib/yandexMetrica";
-
 export default function ContactSection() {
   return (
     <section id="contact" className="py-24 lg:py-32 bg-white">
@@ -34,11 +30,6 @@ export default function ContactSection() {
                     href="https://wa.me/79141903086"
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={() =>
-                      reachGoal("whatsapp_click", {
-                        location: "contact_section",
-                      })
-                    }
                     className="hover:text-accent transition-colors"
                   >
                     +7 914 190 3086
@@ -50,11 +41,6 @@ export default function ContactSection() {
                     href="https://t.me/+79141903086"
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={() =>
-                      reachGoal("telegram_click", {
-                        location: "contact_section",
-                      })
-                    }
                     className="hover:text-accent transition-colors"
                   >
                     +7 914 190 3086
@@ -69,12 +55,6 @@ export default function ContactSection() {
                 <p className="text-muted">
                   <a
                     href="tel:+74212454154"
-                    onClick={() =>
-                      reachGoal("phone_click", {
-                        phone: "+74212454154",
-                        location: "contact_section",
-                      })
-                    }
                     className="hover:text-accent transition-colors"
                   >
                     (4212) 45-41-54
@@ -83,12 +63,6 @@ export default function ContactSection() {
                 <p className="text-muted">
                   <a
                     href="tel:+79141903086"
-                    onClick={() =>
-                      reachGoal("phone_click", {
-                        phone: "+79141903086",
-                        location: "contact_section",
-                      })
-                    }
                     className="hover:text-accent transition-colors"
                   >
                     +7 914 190 3086
@@ -103,7 +77,6 @@ export default function ContactSection() {
               <p className="text-muted">
                 <a
                   href="mailto:romanshtor@rambler.ru"
-                  onClick={() => reachGoal("email_click")}
                   className="hover:text-accent transition-colors"
                 >
                   romanshtor@rambler.ru
