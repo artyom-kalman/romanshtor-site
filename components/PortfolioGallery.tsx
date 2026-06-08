@@ -5,24 +5,78 @@ import { useState, useCallback } from "react";
 import GalleryLightbox from "./GalleryLightbox";
 
 const portfolioImages = [
-  { filename: "qM5juQKKnIc.jpg", alt: "Римские шторы - проект 1" },
-  { filename: "1swHBSnnHVM.jpg", alt: "Римские шторы - проект 2" },
-  { filename: "28tJPsLv9vE.jpg", alt: "Римские шторы - проект 3" },
-  { filename: "6tmOG69Pg-Q.jpg", alt: "Римские шторы - проект 4" },
-  { filename: "6U6emU6_yC4.jpg", alt: "Римские шторы - проект 5" },
-  { filename: "AMbWfKnbqCE.jpg", alt: "Римские шторы - проект 6" },
-  { filename: "AXhDS6KCWUA.jpg", alt: "Римские шторы - проект 7" },
-  { filename: "AyEC5ehAJjw.jpg", alt: "Римские шторы - проект 8" },
-  { filename: "B-LIda8Fxoo.jpg", alt: "Римские шторы - проект 9" },
-  { filename: "cYgfsANgmy8.jpg", alt: "Римские шторы - проект 10" },
-  { filename: "c384032mbj8.jpg", alt: "Римские шторы - проект 11" },
-  { filename: "cBa7BpiruJA.jpg", alt: "Римские шторы - проект 12" },
-  { filename: "fvidZKuWsLw.jpg", alt: "Римские шторы - проект 13" },
-  { filename: "fu1pDOGnpxM.jpg", alt: "Римские шторы - проект 14" },
-  { filename: "NK6FMFGdIUg.jpg", alt: "Римские шторы - проект 15" },
-  { filename: "r-NW2XJkuVw2.jpg", alt: "Римские шторы - проект 16" },
-  { filename: "wCWLZlNZkmY.jpg", alt: "Римские шторы - проект 17" },
-  { filename: "TwSX5-muCvk_1.jpg", alt: "Римские шторы - проект 18" },
+  {
+    filename: "qM5juQKKnIc.jpg",
+    alt: "Римские шторы на заказ в гостиную — работа салона Римские Шторы, Хабаровск",
+  },
+  {
+    filename: "1swHBSnnHVM.jpg",
+    alt: "Пошив штор и портьер в спальню — салон Римские Шторы, Хабаровск",
+  },
+  {
+    filename: "28tJPsLv9vE.jpg",
+    alt: "Текстильное оформление окна с тюлем и гардинами, Хабаровск",
+  },
+  {
+    filename: "6tmOG69Pg-Q.jpg",
+    alt: "Римские шторы для кухни на заказ — салон Римские Шторы, Хабаровск",
+  },
+  {
+    filename: "6U6emU6_yC4.jpg",
+    alt: "Портьеры и ламбрекены в интерьере гостиной, Хабаровск",
+  },
+  {
+    filename: "AMbWfKnbqCE.jpg",
+    alt: "Декор окон римскими шторами в квартире, Хабаровск",
+  },
+  {
+    filename: "AXhDS6KCWUA.jpg",
+    alt: "Шторы на заказ для частного дома — салон Римские Шторы, Хабаровск",
+  },
+  {
+    filename: "AyEC5ehAJjw.jpg",
+    alt: "Дизайнерское оформление окна шторами и тюлем, Хабаровск",
+  },
+  {
+    filename: "B-LIda8Fxoo.jpg",
+    alt: "Римские шторы в детскую комнату на заказ, Хабаровск",
+  },
+  {
+    filename: "cYgfsANgmy8.jpg",
+    alt: "Пошив гардин и портьер в гостиную — салон Римские Шторы, Хабаровск",
+  },
+  {
+    filename: "c384032mbj8.jpg",
+    alt: "Текстильное оформление интерьера шторами на заказ, Хабаровск",
+  },
+  {
+    filename: "cBa7BpiruJA.jpg",
+    alt: "Римские шторы для большого окна — салон Римские Шторы, Хабаровск",
+  },
+  {
+    filename: "fvidZKuWsLw.jpg",
+    alt: "Шторы и солнцезащитные системы в интерьере, Хабаровск",
+  },
+  {
+    filename: "fu1pDOGnpxM.jpg",
+    alt: "Портьеры на заказ для спальни — салон Римские Шторы, Хабаровск",
+  },
+  {
+    filename: "NK6FMFGdIUg.jpg",
+    alt: "Оформление окон римскими шторами в офисе, Хабаровск",
+  },
+  {
+    filename: "r-NW2XJkuVw2.jpg",
+    alt: "Дизайн штор для гостиной на заказ — салон Римские Шторы, Хабаровск",
+  },
+  {
+    filename: "wCWLZlNZkmY.jpg",
+    alt: "Тюль и гардины в интерьере квартиры, Хабаровск",
+  },
+  {
+    filename: "TwSX5-muCvk_1.jpg",
+    alt: "Римские шторы на заказ в современном интерьере — Хабаровск",
+  },
 ];
 
 export default function PortfolioGallery() {
