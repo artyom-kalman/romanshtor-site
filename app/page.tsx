@@ -245,61 +245,6 @@ const ProcessSection = () => {
   );
 };
 
-const Footer = () => {
-  return (
-    <footer className="bg-primary text-white py-12">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4">РИМСКИЕ ШТОРЫ</h3>
-            <p className="text-white/70 text-sm">
-              Салон текстильного дизайна в Хабаровске
-            </p>
-          </div>
-
-          <div>
-            <h4 className="font-bold mb-4">Контакты</h4>
-            <div className="space-y-2 text-sm text-white/70">
-              <p>
-                <a
-                  href="tel:+74212454154"
-                  className="hover:text-white transition-colors"
-                >
-                  45-41-54
-                </a>
-              </p>
-              <p>
-                <a
-                  href="tel:+79141903086"
-                  className="hover:text-white transition-colors"
-                >
-                  +7 914 190 3086
-                </a>
-              </p>
-              <p>
-                <a
-                  href="mailto:romanshtor@rambler.ru"
-                  className="hover:text-white transition-colors"
-                >
-                  romanshtor@rambler.ru
-                </a>
-              </p>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="font-bold mb-4">Юридическая информация</h4>
-            <div className="space-y-1 text-sm text-white/70">
-              <p>ИП Калашников Павел Геннадьевич</p>
-              <p>ИНН 272106412600</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-};
-
 export default function Home() {
   return (
     <main className="min-h-screen pt-16">
@@ -309,7 +254,6 @@ export default function Home() {
       <ProcessSection />
       <PortfolioGallery />
       <ContactSection />
-      <Footer />
     </main>
   );
 }

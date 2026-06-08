@@ -1,3 +1,5 @@
+import { business } from "@/lib/business";
+
 export default function ContactSection() {
   return (
     <section id="contact" className="py-24 lg:py-32 bg-white">
@@ -17,7 +19,9 @@ export default function ContactSection() {
             {/* Address Card */}
             <div className="p-6 border border-gray-200 rounded-lg hover:border-accent transition-colors">
               <h3 className="text-xl font-bold mb-2">Адрес</h3>
-              <p className="text-muted">г. Хабаровск, ул. Гамарника, д. 43а</p>
+              <p className="text-muted">
+                г. {business.address.locality}, {business.address.street}
+              </p>
             </div>
 
             {/* Messengers Card */}
@@ -27,23 +31,23 @@ export default function ContactSection() {
                 <p className="text-muted">
                   WhatsApp:{" "}
                   <a
-                    href="https://wa.me/79141903086"
+                    href={business.mobile.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-accent transition-colors"
                   >
-                    +7 914 190 3086
+                    {business.mobile.display}
                   </a>
                 </p>
                 <p className="text-muted">
                   Telegram:{" "}
                   <a
-                    href="https://t.me/+79141903086"
+                    href={business.mobile.telegram}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-accent transition-colors"
                   >
-                    +7 914 190 3086
+                    {business.mobile.display}
                   </a>
                 </p>
               </div>
@@ -54,18 +58,18 @@ export default function ContactSection() {
               <div className="space-y-2">
                 <p className="text-muted">
                   <a
-                    href="tel:+74212454154"
+                    href={`tel:${business.phone.tel}`}
                     className="hover:text-accent transition-colors"
                   >
-                    (4212) 45-41-54
+                    {business.phone.display}
                   </a>
                 </p>
                 <p className="text-muted">
                   <a
-                    href="tel:+79141903086"
+                    href={`tel:${business.mobile.tel}`}
                     className="hover:text-accent transition-colors"
                   >
-                    +7 914 190 3086
+                    {business.mobile.display}
                   </a>
                 </p>
               </div>
@@ -76,10 +80,10 @@ export default function ContactSection() {
               <h3 className="text-xl font-bold mb-2">Email</h3>
               <p className="text-muted">
                 <a
-                  href="mailto:romanshtor@rambler.ru"
+                  href={`mailto:${business.email}`}
                   className="hover:text-accent transition-colors"
                 >
-                  romanshtor@rambler.ru
+                  {business.email}
                 </a>
               </p>
             </div>
