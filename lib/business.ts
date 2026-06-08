@@ -24,7 +24,7 @@ export const business = {
 
   /** Реквизиты. */
   inn: "272106412600",
-  ogrnip: "", // TODO: ОГРНИП (15 цифр) — заполнить из выписки ЕГРИП
+  ogrnip: "304272411400025",
 
   address: {
     /** Street + building, matches Yandex card. */
@@ -32,8 +32,7 @@ export const business = {
     locality: "Хабаровск",
     region: "Хабаровский край",
     country: "RU",
-    /** TODO: подтвердить точный почтовый индекс здания (680000 — общий индекс центра Хабаровска). */
-    postalCode: "680000",
+    postalCode: "680020",
   },
 
   /** Primary landline — matches Yandex card. */
@@ -54,13 +53,12 @@ export const business = {
 
   /** Approximate coordinates of Гамарника, 43А. */
   geo: {
-    // TODO: уточнить точные координаты входа в салон (текущие — приблизительные).
     lat: 48.4827,
     lng: 135.0684,
   },
 
   /**
-   * Opening hours. TODO: подтвердить точные часы работы по дням недели.
+   * Opening hours.
    * `days` uses schema.org English day names for JSON-LD.
    */
   openingHours: [
@@ -68,7 +66,7 @@ export const business = {
       days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       label: "Пн–Пт",
       opens: "10:00",
-      closes: "18:00",
+      closes: "19:00",
     },
     {
       days: ["Saturday"],
@@ -83,11 +81,8 @@ export const business = {
 
   /** External profiles for schema `sameAs`. Empty entries are filtered out. */
   sameAs: {
-    // TODO: вставить публичную ссылку на карточку Яндекс.Бизнес (Яндекс Карты).
-    yandexBusiness: "",
+    yandexBusiness: "https://yandex.ru/profile/1079072514?lang=ru&utm_source=copy_link&utm_medium=social&utm_campaign=share",
     dvhab: "https://www.dvhab.ru/rimskie-shtory/gamarnika-43a-branch-271928",
-    // TODO: ссылка на сообщество ВКонтакте, если есть.
-    vk: "",
   },
 } as const;
 

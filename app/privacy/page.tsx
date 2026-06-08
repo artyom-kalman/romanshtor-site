@@ -22,9 +22,8 @@ export default function PrivacyPage() {
           <h1 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
             Политика в отношении обработки персональных данных
           </h1>
-          {/* TODO: проставить актуальную дату вступления в силу. */}
           <p className="text-muted mb-10">
-            Редакция от&nbsp;__.__.____ г.
+            Редакция от&nbsp;08.06.2026 г.
           </p>
 
           <div className="prose-custom space-y-6 text-muted leading-relaxed">
