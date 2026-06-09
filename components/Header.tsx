@@ -1,16 +1,17 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navigation = [
-    { name: "О нас", href: "#about" },
-    { name: "Услуги", href: "#services" },
-    { name: "Процесс", href: "#process" },
-    { name: "Портфолио", href: "#portfolio" },
-    { name: "Контакты", href: "#contact" },
+    { name: "О нас", href: "/#about" },
+    { name: "Услуги", href: "/#services" },
+    { name: "Процесс", href: "/#process" },
+    { name: "Портфолио", href: "/#portfolio" },
+    { name: "Контакты", href: "/#contact" },
   ];
 
   const handleNavClick = () => {
@@ -22,24 +23,24 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Title */}
-          <a
-            href="#hero"
+          <Link
+            href="/#hero"
             className="text-xl lg:text-2xl font-bold tracking-tight hover:text-accent transition-colors"
             onClick={handleNavClick}
           >
             РИМСКИЕ ШТОРЫ
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className="text-sm font-medium text-gray-700 hover:text-accent transition-colors"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -90,14 +91,14 @@ export default function Header() {
           <div className="lg:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
               {navigation.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   className="text-base font-medium text-gray-700 hover:text-accent transition-colors"
                   onClick={handleNavClick}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <div className="pt-4 border-t border-gray-200 flex flex-col space-y-3">
                 <a
