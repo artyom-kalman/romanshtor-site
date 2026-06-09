@@ -72,7 +72,7 @@ export const business = {
       days: ["Saturday"],
       label: "Сб",
       opens: "10:00",
-      closes: "15:00",
+      closes: "16:00",
     },
   ],
 

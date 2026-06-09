@@ -11,8 +11,6 @@ export const metadata: Metadata = {
 };
 
 // Existing Yandex Конструктор карт widget already configured for the salon.
-// TODO: подтвердить, что виджет указывает на ул. Гамарника, 43А; при необходимости
-// сгенерировать новый src в Яндекс.Конструкторе карт и заменить ниже.
 const YANDEX_MAP_SRC =
   "https://yandex.com/map-widget/v1/?um=constructor%3Aa4a27257b0b4971a32170042c0f44e7106dcbc05b134bdca4a1de3ea0952276c&source=constructor";
 
