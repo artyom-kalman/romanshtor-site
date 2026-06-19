@@ -99,6 +99,17 @@ export default function ContactsPage() {
                       {business.mobile.display}
                     </a>
                   </p>
+                  <p>
+                    MAX:{" "}
+                    <a
+                      href={business.mobile.max}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-accent transition-colors"
+                    >
+                      {business.mobile.display}
+                    </a>
+                  </p>
                 </div>
               </div>
 

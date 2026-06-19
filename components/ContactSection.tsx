@@ -50,6 +50,17 @@ export default function ContactSection() {
                     {business.mobile.display}
                   </a>
                 </p>
+                <p className="text-muted">
+                  MAX:{" "}
+                  <a
+                    href={business.mobile.max}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent transition-colors"
+                  >
+                    {business.mobile.display}
+                  </a>
+                </p>
               </div>
             </div>
             {/* Phones Card */}
