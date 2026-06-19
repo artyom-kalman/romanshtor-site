@@ -47,6 +47,7 @@ export const business = {
     tel: "+79141903086",
     whatsapp: "https://wa.me/79141903086",
     telegram: "https://t.me/+79141903086",
+    max: "https://max.ru/u/f9LHodD0cOLQ1pAUVmQAFcup2XbKsqPKXXrczEW86yHnZDRegSk6RJfzOFw",
   },
 
   email: "romanshtor@rambler.ru",
