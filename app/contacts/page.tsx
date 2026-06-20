@@ -18,8 +18,8 @@ export default function ContactsPage() {
   const hours = business.openingHours;
 
   return (
-    <main className="min-h-screen pt-16">
-      <section className="py-16 lg:py-24 bg-white">
+    <main className="min-h-screen">
+      <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <p className="text-sm uppercase tracking-widest text-muted mb-4">

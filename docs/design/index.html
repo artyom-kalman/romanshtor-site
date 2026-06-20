@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="ru" data-direction="c" data-grid="asymmetric">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Римские шторы — текстильное оформление интерьеров</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Tenor+Sans&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script src="image-slot.js"></script>
+<link id="gfont-PT-Sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@300;400;500;600;700&amp;display=swap">
+<link id="gfont-Poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap">
+</head>
+<body style="font-family: &quot;Poppins&quot;">
+
+<!-- ============================================================ HEADER -->
+<header class="hdr">
+  <div class="hdr-inner">
+    <a href="#" class="brand">
+      <span class="brand-mark">Р</span>
+      <span>Римские шторы</span>
+    </a>
+    <nav class="nav">
+      <a href="#about">О нас</a>
+      <a href="#services">Услуги</a>
+      <a href="#process">Процесс</a>
+      <a href="#portfolio">Портфолио</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <div class="hdr-right">
+      <a href="tel:+74214154" class="hdr-phone">41‑41‑54</a>
+      <a href="#contact" class="btn btn--sm">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================ HERO -->
+<section class="hero" data-screen-label="01 Hero">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div class="hero-meta">
+        <span class="eyebrow">№ 001 — Атéлье</span>
+        <span class="eyebrow">Хабаровск · с 2005</span>
+      </div>
+
+      <h1 class="hero-h1">
+        Римские<span class="word2">шторы</span>
+      </h1>
+
+      <div class="hero-sub">
+        <p class="hero-lede">
+          Текстильное оформление частных и коммерческих интерьеров на&nbsp;высоком дизайнерском и&nbsp;инженерном уровне. Двадцать лет — окно за&nbsp;окном.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn">Записаться на консультацию</a>
+          <a href="#portfolio" class="btn btn--ghost">Смотреть работы</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <image-slot id="hero" placeholder="Главный кадр интерьера" shape="rect" src="img/bath-sage-drapes.jpg"></image-slot>
+      <div class="hero-badge">
+        <span class="hero-badge-num">20</span>
+        <span>лет на&nbsp;рынке</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-marquee">
+    <div class="hero-marquee-track">
+      <span>Римские шторы</span>
+      <span>Австрийские</span>
+      <span>Французские</span>
+      <span>Портьеры и&nbsp;гардины</span>
+      <span>Ламбрекены</span>
+      <span>Жалюзи</span>
+      <span>Шторы плиссе</span>
+      <span>Покрывала и&nbsp;подушки</span>
+      <span>Римские шторы</span>
+      <span>Австрийские</span>
+      <span>Французские</span>
+      <span>Портьеры и&nbsp;гардины</span>
+      <span>Ламбрекены</span>
+      <span>Жалюзи</span>
+      <span>Шторы плиссе</span>
+      <span>Покрывала и&nbsp;подушки</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ ABOUT -->
+<section class="section" id="about" data-screen-label="02 About">
+  <div class="wrap about">
+    <div class="about-text">
+      <div class="section-eyebrow"><span class="eyebrow">О нас</span></div>
+      <h2 class="display-h2">20 лет в&nbsp;<em>текстильном</em> дизайне интерьеров</h2>
+      <p>
+        Мы выполняем текстильное оформление интерьеров, используя свой дизайн-консалтинг и&nbsp;производственную базу. За&nbsp;это время сложилась команда, которая честно делится с&nbsp;каждым новым клиентом своим опытом.
+      </p>
+      <p>
+        Уникальный авторский подход в&nbsp;работе с&nbsp;клиентом направлен на&nbsp;достижение главной цели — заказчик «полностью доволен». Чёткое отношение к&nbsp;каждому миллиметру отличает наши работы от&nbsp;работ конкурентов.
+      </p>
+      <p class="muted">
+        В&nbsp;нашем салоне собраны ткани со&nbsp;всего мира — разнообразные по&nbsp;стилю и&nbsp;стоимости. Их&nbsp;же&nbsp;богатое сопровождение&nbsp;— карнизы, профессиональные крепления и&nbsp;электроприводы&nbsp;— позволяет добавлять максимальный результат не&nbsp;только эстетический, но&nbsp;и&nbsp;технический.
+      </p>
+
+      <div class="about-stats">
+        <div class="about-stat">
+          <div class="num">20</div>
+          <div class="lbl">лет работы</div>
+        </div>
+        <div class="about-stat">
+          <div class="num">600+</div>
+          <div class="lbl">проектов</div>
+        </div>
+        <div class="about-stat">
+          <div class="num">∞</div>
+          <div class="lbl">тканей в&nbsp;салоне</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-image">
+      <image-slot id="about" placeholder="Окно с готовой работой" shape="rect" src="img/window-rocker.jpg"></image-slot>
+      <div class="about-caption">Загородный дом · Хабаровский край</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ SERVICES -->
+<section class="section section-alt" id="services" data-screen-label="03 Services">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-eyebrow"><span class="eyebrow">Услуги</span></div>
+        <h2 class="display-h2">Что мы&nbsp;<em>предлагаем</em></h2>
+      </div>
+      <p class="muted" style="max-width: 32ch; text-align: right;">Полный цикл&nbsp;— от&nbsp;замера и&nbsp;разработки проекта до&nbsp;пошива, монтажа карнизов и&nbsp;систем защиты.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service">
+        <span class="service-num">01</span>
+        <h3 class="service-title">Подъёмные шторы</h3>
+        <ul class="service-list">
+          <li>Римские</li>
+          <li>Австрийские</li>
+          <li>Французские</li>
+        </ul>
+        <span class="service-arrow">↗</span>
+      </article>
+
+      <article class="service">
+        <span class="service-num">02</span>
+        <h3 class="service-title">Традиционные драпировки</h3>
+        <ul class="service-list">
+          <li>Портьеры</li>
+          <li>Гардины</li>
+          <li>Ламбрекены</li>
+        </ul>
+        <span class="service-arrow">↗</span>
+      </article>
+
+      <article class="service">
+        <span class="service-num">03</span>
+        <h3 class="service-title">Солнцезащитные системы</h3>
+        <ul class="service-list">
+          <li>Жалюзи</li>
+          <li>Рулонные шторы</li>
+          <li>Шторы плиссе</li>
+        </ul>
+        <span class="service-arrow">↗</span>
+      </article>
+
+      <article class="service">
+        <span class="service-num">04</span>
+        <h3 class="service-title">Дополнительный текстиль</h3>
+        <ul class="service-list">
+          <li>Покрывала</li>
+          <li>Подушки</li>
+          <li>Чехлы и&nbsp;скатерти</li>
+          <li>Столовое бельё</li>
+        </ul>
+        <span class="service-arrow">↗</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PROCESS -->
+<section class="section" id="process" data-screen-label="04 Process">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-eyebrow"><span class="eyebrow">Процесс</span></div>
+        <h2 class="display-h2">Как мы&nbsp;<em>работаем</em></h2>
+      </div>
+    </div>
+
+    <div class="process">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-dot"></div>
+        <div class="step-title">Подготовка</div>
+        <p class="step-desc">Выезд замерщика, фото и&nbsp;подробный разговор о&nbsp;задачах.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-dot"></div>
+        <div class="step-title">Дизайн</div>
+        <p class="step-desc">Готовим эскизы, подбираем ткани и&nbsp;карнизы, обсуждаем варианты.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-dot"></div>
+        <div class="step-title">Примерка</div>
+        <p class="step-desc">Проверяем образцы в&nbsp;вашем интерьере при дневном свете.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-dot"></div>
+        <div class="step-title">Оформление заказа</div>
+        <p class="step-desc">Заключаем договор и&nbsp;запускаем производство.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">05</div>
+        <div class="step-dot"></div>
+        <div class="step-title">Исполнение</div>
+        <p class="step-desc">Пошив, монтаж и&nbsp;сдача готового изделия «под&nbsp;ключ».</p>
+      </div>
+    </div>
+
+    <div class="process-cta">
+      <a href="#contact" class="btn">Начать проект</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PORTFOLIO -->
+<section class="section section-alt" id="portfolio" data-screen-label="05 Portfolio">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-eyebrow"><span class="eyebrow">Портфолио</span></div>
+        <h2 class="display-h2">Наши <em>работы</em></h2>
+      </div>
+      <p class="muted" style="max-width: 32ch; text-align: right;">Гостиные, спальни, кухни, кабинеты и&nbsp;коммерческие пространства.</p>
+    </div>
+
+    <div class="portfolio-grid">
+      <div class="tile t-lg">
+        <image-slot id="p1" placeholder="Гостиная" shape="rect" src="img/living-marble.jpg"></image-slot>
+        <div class="tile-meta"><span>Гостиная · мрамор и&nbsp;лён</span></div>
+      </div>
+      <div class="tile t-md">
+        <image-slot id="p2" placeholder="Спальня" shape="rect" src="img/bedroom-teal.jpg"></image-slot>
+        <div class="tile-meta"><span>Спальня · изумруд</span></div>
+      </div>
+      <div class="tile t-sm">
+        <image-slot id="p3" placeholder="Кухня" shape="rect" src="img/kitchen-floral.jpg"></image-slot>
+        <div class="tile-meta"><span>Кухня · прованс</span></div>
+      </div>
+      <div class="tile t-sm">
+        <image-slot id="p4" placeholder="Ванная" shape="rect" src="img/bath-attic.jpg"></image-slot>
+        <div class="tile-meta"><span>Ванная · мансарда</span></div>
+      </div>
+      <div class="tile t-md">
+        <image-slot id="p5" placeholder="Шоурум" shape="rect" src="img/showroom-arches.jpg"></image-slot>
+        <div class="tile-meta"><span>Шоурум · арки</span></div>
+      </div>
+      <div class="tile t-tall">
+        <image-slot id="p6" placeholder="Ресторан" shape="rect" src="img/restaurant-drapes.jpg"></image-slot>
+        <div class="tile-meta"><span>Ресторан · бирюза и&nbsp;охра</span></div>
+      </div>
+      <div class="tile t-sm">
+        <image-slot id="p7" placeholder="Ванная" shape="rect" src="img/bath-wood.jpg"></image-slot>
+        <div class="tile-meta"><span>Ванная · сруб</span></div>
+      </div>
+      <div class="tile t-sm">
+        <image-slot id="p8" placeholder="Столовая" shape="rect" src="img/dining-forest.jpg"></image-slot>
+        <div class="tile-meta"><span>Столовая · лес</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ CONTACT -->
+<section class="section" id="contact" data-screen-label="06 Contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-eyebrow"><span class="eyebrow">Контакты</span></div>
+        <h2 class="display-h2">Свяжитесь <em>с&nbsp;нами</em></h2>
+      </div>
+    </div>
+
+    <div class="contact">
+      <div class="contact-cards">
+        <div class="contact-card">
+          <span class="contact-card-lbl">Адрес</span>
+          <span class="contact-card-val">
+            г.&nbsp;Хабаровск<small>ул.&nbsp;Гамарника, д.&nbsp;43а</small>
+          </span>
+        </div>
+        <div class="contact-card">
+          <span class="contact-card-lbl">Телефоны</span>
+          <span class="contact-card-val">
+            +7&nbsp;(4212)&nbsp;45-41-54<small>+7 914 150 3086</small>
+          </span>
+        </div>
+        <div class="contact-card">
+          <span class="contact-card-lbl">Мессенджеры</span>
+          <span class="contact-card-val">
+            WhatsApp<small>+7 914 150 3086</small>
+          </span>
+        </div>
+        <div class="contact-card">
+          <span class="contact-card-lbl">Email</span>
+          <span class="contact-card-val">
+            roman.htor@yandex.ru
+          </span>
+        </div>
+      </div>
+
+      <div class="contact-map">
+        <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width=".5" opacity=".4"/>
+            </pattern>
+          </defs>
+          <rect width="800" height="600" fill="var(--bg-2)"/>
+          <rect width="800" height="600" fill="url(#grid)" style="color: var(--muted)"/>
+          <!-- streets -->
+          <path d="M 0 220 L 800 180" stroke="var(--line-strong)" stroke-width="22" fill="none" opacity=".5"/>
+          <path d="M 380 0 L 420 600" stroke="var(--line-strong)" stroke-width="18" fill="none" opacity=".5"/>
+          <path d="M 0 400 L 800 380" stroke="var(--line-strong)" stroke-width="14" fill="none" opacity=".4"/>
+          <path d="M 180 0 L 200 600" stroke="var(--line-strong)" stroke-width="10" fill="none" opacity=".3"/>
+          <path d="M 600 0 L 620 600" stroke="var(--line-strong)" stroke-width="10" fill="none" opacity=".3"/>
+          <!-- blocks (subtle) -->
+          <rect x="240" y="240" width="120" height="120" fill="var(--ink)" opacity=".05"/>
+          <rect x="440" y="240" width="120" height="120" fill="var(--ink)" opacity=".05"/>
+          <rect x="240" y="40" width="120" height="120" fill="var(--ink)" opacity=".05"/>
+          <rect x="440" y="40" width="120" height="120" fill="var(--ink)" opacity=".05"/>
+        </svg>
+        <div class="contact-pin">
+          <span class="lbl">Гамарника 43а</span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ FOOTER -->
+<footer class="ftr">
+  <div class="wrap">
+    <div>
+      <div class="ftr-brand">Римские<br/>шторы</div>
+      <p class="ftr-tag">Текстильное оформление интерьеров с&nbsp;2005&nbsp;года. Хабаровск.</p>
+    </div>
+    <div class="ftr-col">
+      <div class="ftr-col-title">Навигация</div>
+      <ul>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#process">Процесс</a></li>
+        <li><a href="#portfolio">Портфолио</a></li>
+      </ul>
+    </div>
+    <div class="ftr-col">
+      <div class="ftr-col-title">Контакты</div>
+      <ul>
+        <li>+7 (4212) 45-41-54</li>
+        <li>+7 914 150 3086</li>
+        <li>roman.htor@yandex.ru</li>
+      </ul>
+    </div>
+    <div class="ftr-col">
+      <div class="ftr-col-title">Юридическая информация</div>
+      <ul>
+        <li>ИП Овчаренков</li>
+        <li>Танич Геннадьевич</li>
+        <li>ИНН 272106562420</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap ftr-bottom">
+    <span>© 2005–2025 · Все права защищены</span>
+    <span>Хабаровск · ул. Гамарника, 43а</span>
+  </div>
+</footer>
+
+<!-- Tweaks panel -->
+<div id="tweaks-root"></div>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="site-tweaks.jsx"></script>
+
+</body>
+</html>

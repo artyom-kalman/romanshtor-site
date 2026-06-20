@@ -40,3 +40,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# design mockup scratch uploads (dupes/screenshots, not used by the mockup)
+docs/design/uploads/

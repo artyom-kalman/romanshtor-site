@@ -1,83 +1,71 @@
 import Link from "next/link";
-import { business, fullAddress } from "@/lib/business";
+import { business } from "@/lib/business";
 
 export default function Footer() {
-  const hoursText = business.openingHours
-    .map((h) => `${h.label}: ${h.opens}–${h.closes}`)
-    .join(", ");
+  const navigation = [
+    { name: "О нас", href: "/#about" },
+    { name: "Услуги", href: "/#services" },
+    { name: "Процесс", href: "/#process" },
+    { name: "Портфолио", href: "/#portfolio" },
+    { name: "Контакты", href: "/#contact" },
+  ];
 
   return (
-    <footer className="bg-primary text-white py-12">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Brand */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">РИМСКИЕ ШТОРЫ</h3>
-            <p className="text-white/70 text-sm">
-              Салон текстильного дизайна в Хабаровске
-            </p>
-            <address className="not-italic text-white/70 text-sm mt-4 space-y-1">
-              <p>{fullAddress()}</p>
-              <p>Часы работы: {hoursText}</p>
-            </address>
+    <footer className="ftr">
+      <div className="wrap">
+        <div>
+          <div className="ftr-brand">
+            Римские
+            <br />
+            шторы
           </div>
+          <p className="ftr-tag">
+            Текстильное оформление интерьеров с 2005 года.{" "}
+            {business.address.locality}.
+          </p>
+        </div>
 
-          {/* Contacts */}
-          <div>
-            <h4 className="font-bold mb-4">Контакты</h4>
-            <div className="space-y-2 text-sm text-white/70">
-              <p>
-                <a
-                  href={`tel:${business.phone.tel}`}
-                  className="hover:text-white transition-colors"
-                >
-                  {business.phone.display}
-                </a>
-              </p>
-              <p>
-                <a
-                  href={`tel:${business.mobile.tel}`}
-                  className="hover:text-white transition-colors"
-                >
-                  {business.mobile.display}
-                </a>
-              </p>
-              <p>
-                <a
-                  href={`mailto:${business.email}`}
-                  className="hover:text-white transition-colors"
-                >
-                  {business.email}
-                </a>
-              </p>
-              <p className="pt-2">
-                <Link
-                  href="/contacts"
-                  className="hover:text-white transition-colors underline underline-offset-2"
-                >
-                  Контакты и схема проезда
-                </Link>
-              </p>
-            </div>
-          </div>
+        <div className="ftr-col">
+          <div className="ftr-col-title">Навигация</div>
+          <ul>
+            {navigation.map((item) => (
+              <li key={item.name}>
+                <Link href={item.href}>{item.name}</Link>
+              </li>
+            ))}
+            <li>
+              <Link href="/contacts">Контакты и схема проезда</Link>
+            </li>
+          </ul>
+        </div>
 
-          {/* Legal реквизиты */}
-          <div>
-            <h4 className="font-bold mb-4">Реквизиты</h4>
-            <div className="space-y-1 text-sm text-white/70">
-              <p>{business.legalName}</p>
-              <p>ИНН {business.inn}</p>
-              {business.ogrnip && <p>ОГРНИП {business.ogrnip}</p>}
-              <p className="pt-3">
-                <Link
-                  href="/privacy"
-                  className="hover:text-white transition-colors underline underline-offset-2"
-                >
-                  Политика конфиденциальности
-                </Link>
-              </p>
-            </div>
-          </div>
+        <div className="ftr-col">
+          <div className="ftr-col-title">Контакты</div>
+          <ul>
+            <li>
+              <a href={`tel:${business.phone.tel}`}>{business.phone.display}</a>
+            </li>
+            <li>
+              <a href={`tel:${business.mobile.tel}`}>
+                {business.mobile.display}
+              </a>
+            </li>
+            <li>
+              <a href={`mailto:${business.email}`}>{business.email}</a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="ftr-col">
+          <div className="ftr-col-title">Юридическая информация</div>
+          <ul>
+            <li>{business.legalName}</li>
+            <li>ИНН {business.inn}</li>
+            {business.ogrnip && <li>ОГРНИП {business.ogrnip}</li>}
+            <li>
+              <Link href="/privacy">Политика конфиденциальности</Link>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>

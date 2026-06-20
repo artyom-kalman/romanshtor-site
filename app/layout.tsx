@@ -1,20 +1,29 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Tenor_Sans, Manrope, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import "./design.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import JsonLd from "@/components/JsonLd";
 import AnalyticsScripts from "@/components/AnalyticsScripts";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const tenorSans = Tenor_Sans({
+  variable: "--font-display-next",
+  subsets: ["cyrillic", "latin"],
+  weight: "400",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const manrope = Manrope({
+  variable: "--font-body-next",
+  subsets: ["cyrillic", "latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono-next",
+  subsets: ["cyrillic", "latin"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -79,7 +88,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${tenorSans.variable} ${manrope.variable} ${jetbrainsMono.variable} antialiased`}
       >
         <JsonLd />
         <Header />
