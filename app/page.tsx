@@ -33,8 +33,7 @@ const HeroSection = () => {
           <div className="hero-sub">
             <p className="hero-lede">
               Текстильное оформление частных и коммерческих интерьеров на
-              высоком дизайнерском и инженерном уровне. Двадцать лет — окно за
-              окном.
+              высоком дизайнерском и инженерном уровне.
             </p>
             <div className="hero-actions">
               <a href="#contact" className="btn">
@@ -56,8 +55,15 @@ const HeroSection = () => {
             sizes="(max-width: 900px) 100vw, 50vw"
           />
           <div className="hero-badge">
-            <span className="hero-badge-num">20</span>
-            <span>лет на рынке</span>
+            <span className="hero-badge-est">Осн. 2005</span>
+            <span className="hero-badge-fig">
+              <span className="hero-badge-num">20</span>
+              <span className="hero-badge-label">
+                лет
+                <br />
+                на рынке
+              </span>
+            </span>
           </div>
         </div>
       </div>

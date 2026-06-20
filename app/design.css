@@ -291,30 +291,48 @@ body {
     color-mix(in oklab, var(--ink) 4%, transparent) 14px 15px
   );
 }
+/* corner-anchored editorial tag — sharp, hairline-framed, matches Direction C */
 .hero-badge {
   position: absolute;
-  left: 24px; bottom: 24px;
+  left: 0; bottom: 0;
   z-index: 2;
-  display: inline-flex; align-items: center; gap: 12px;
-  padding: 10px 16px 10px 14px;
-  background: color-mix(in oklab, var(--bg) 86%, transparent);
-  backdrop-filter: blur(12px);
-  border: var(--hairline);
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--ink);
-  border-radius: var(--r-pill);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 22px 18px;
+  background: var(--bg);
+  border-top: var(--hairline);
+  border-right: var(--hairline);
 }
-
+.hero-badge-est {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: 12px;
+  border-bottom: var(--hairline);
+}
+.hero-badge-fig {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
 .hero-badge-num {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: 42px;
+  line-height: .85;
   font-style: var(--display-style);
   letter-spacing: 0;
-  text-transform: none;
   color: var(--accent);
+}
+.hero-badge-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ink);
+  line-height: 1.4;
 }
 
 .hero-marquee {
