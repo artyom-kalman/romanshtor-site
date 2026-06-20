@@ -44,7 +44,7 @@ export default function ContactSection() {
 
               <div className="contact-card">
                 <span className="contact-card-lbl">Мессенджеры</span>
-                <span className="contact-card-val contact-card-links-inline">
+                <span className="contact-card-val contact-card-links">
                   <a
                     href={business.mobile.whatsapp}
                     target="_blank"
@@ -52,9 +52,6 @@ export default function ContactSection() {
                   >
                     WhatsApp
                   </a>
-                  <span className="contact-card-sep" aria-hidden="true">
-                    ·
-                  </span>
                   <a
                     href={business.mobile.telegram}
                     target="_blank"
@@ -62,9 +59,6 @@ export default function ContactSection() {
                   >
                     Telegram
                   </a>
-                  <span className="contact-card-sep" aria-hidden="true">
-                    ·
-                  </span>
                   <a
                     href={business.mobile.max}
                     target="_blank"

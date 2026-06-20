@@ -683,17 +683,6 @@ body {
   flex-direction: column;
   gap: 4px;
 }
-.contact-card-links-inline {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.35em;
-}
-.contact-card-sep {
-  color: var(--muted);
-  font-weight: 400;
-  text-transform: none;
-}
 .contact-card-val small {
   display: block;
   font-family: var(--font-body);
