@@ -55,8 +55,8 @@ const HeroSection = () => {
 
         <div className="hero-image">
           <Image
-            src="/images/hero/3_pL8NMeWWk_2.jpg"
-            alt="Купить римские шторы в Хабаровске — салон Римские Шторы"
+            src="/images/hero/gostinaya-uglovoy-divan.jpg"
+            alt="Римские шторы и тюль в светлой гостиной — салон Римские Шторы, Хабаровск"
             fill
             priority
             sizes="(max-width: 900px) 100vw, 50vw"
@@ -144,8 +144,8 @@ const AboutSection = () => {
 
       <div className="about-image">
         <Image
-          src="/images/featured/2yGhM8p7mJA.jpg"
-          alt="Пошив штор на заказ в Хабаровске — салон текстильного дизайна"
+          src="/images/featured/kabinet-ugolok-vid-more.jpg"
+          alt="Текстильное оформление кабинета с видом на море — салон Римские Шторы, Хабаровск"
           fill
           sizes="(max-width: 900px) 100vw, 45vw"
         />

@@ -96,6 +96,21 @@ const portfolioImages = [
     alt: "Римские шторы на заказ в современном интерьере — Хабаровск",
     label: "Современный интерьер",
   },
+  {
+    filename: "divan-lambreken-tyul.jpg",
+    alt: "Диван с ламбрекеном и тюлем в гостиной — салон Римские Шторы, Хабаровск",
+    label: "Гостиная",
+  },
+  {
+    filename: "detskaya-portery-tyul.jpg",
+    alt: "Портьеры и тюль в детской комнате — салон Римские Шторы, Хабаровск",
+    label: "Детская",
+  },
+  {
+    filename: "kommercheskoe-zonirovanie.jpg",
+    alt: "Зонирование коммерческого пространства шторами — салон Римские Шторы, Хабаровск",
+    label: "Коммерческое пространство",
+  },
 ];
 
 const TILE_SIZES = [
@@ -117,6 +132,9 @@ const TILE_SIZES = [
   "t-sm",
   "t-md",
   "t-sm",
+  "t-tall",
+  "t-tall",
+  "t-md",
 ] as const;
 
 export default function PortfolioGallery() {
