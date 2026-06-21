@@ -6,7 +6,7 @@ const YANDEX_MAP_SRC =
 
 export default function ContactSection() {
   return (
-    <section className="section" id="contact">
+    <section className="section section-alt" id="contact">
       <div className="wrap">
         <AnimatedSection>
           <div className="section-head">

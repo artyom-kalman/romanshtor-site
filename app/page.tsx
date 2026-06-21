@@ -4,6 +4,7 @@ import ContactSection from "@/components/ContactSection";
 import AnimatedSection from "@/components/AnimatedSection";
 import {
   business,
+  projectsCountLabel,
   yearsCountLabel,
   yearsInBusiness,
   yearsWord,
@@ -22,15 +23,21 @@ const MARQUEE_ITEMS = [
 
 const HeroSection = () => {
   const marqueeTrack = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS];
-  const experienceYears = yearsInBusiness();
+  const experienceLabel = yearsCountLabel();
 
   return (
     <section className="hero" id="hero">
       <div className="hero-grid">
         <div className="hero-text">
           <div className="hero-meta">
-            <span className="eyebrow">№ 001 — Ателье</span>
-            <span className="eyebrow">Хабаровск · с {business.foundedYear}</span>
+            <div className="hero-credential">
+              <span className="eyebrow">{experienceLabel} на рынке ·</span>
+              <span className="eyebrow">с {business.foundedYear}</span>
+            </div>
+            <div className="hero-credential">
+              <span className="eyebrow">{projectsCountLabel()} проектов ·</span>
+              <span className="eyebrow">{business.address.locality}</span>
+            </div>
           </div>
 
           <h1 className="hero-h1">
@@ -39,6 +46,8 @@ const HeroSection = () => {
 
           <div className="hero-sub">
             <p className="hero-lede">
+              {experienceLabel} опыта и более {business.projectsCompleted}{" "}
+              реализованных проектов.{" "}
               Текстильное оформление частных и коммерческих интерьеров на
               высоком дизайнерском и инженерном уровне.
             </p>
@@ -61,17 +70,6 @@ const HeroSection = () => {
             priority
             sizes="(max-width: 900px) 100vw, 50vw"
           />
-          <div className="hero-badge">
-            <span className="hero-badge-est">Осн. {business.foundedYear}</span>
-            <span className="hero-badge-fig">
-              <span className="hero-badge-num">{experienceYears}</span>
-              <span className="hero-badge-label">
-                {yearsWord(experienceYears)}
-                <br />
-                на рынке
-              </span>
-            </span>
-          </div>
         </div>
       </div>
 
@@ -132,7 +130,7 @@ const AboutSection = () => {
             <div className="lbl">{yearsWord(experienceYears)} работы</div>
           </div>
           <div className="about-stat">
-            <div className="num">600+</div>
+            <div className="num">{projectsCountLabel()}</div>
             <div className="lbl">проектов</div>
           </div>
           <div className="about-stat">
@@ -176,7 +174,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="section section-alt" id="services">
+    <section className="section" id="services">
       <div className="wrap">
         <AnimatedSection>
           <div className="section-head">
@@ -245,7 +243,7 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section className="section" id="process">
+    <section className="section section-alt" id="process">
       <div className="wrap">
         <AnimatedSection>
           <div className="section-head">
@@ -285,10 +283,10 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
-      <AboutSection />
+      <PortfolioGallery />
       <ServicesSection />
       <ProcessSection />
-      <PortfolioGallery />
+      <AboutSection />
       <ContactSection />
     </main>
   );

@@ -81,6 +81,9 @@ export const business = {
   foundedDate: "2003-07-07",
   foundedYear: 2003,
 
+  /** Completed interior projects — update when a new milestone is reached. */
+  projectsCompleted: 600,
+
   url: SITE_URL,
   logoUrl: `${SITE_URL}/images/hero/3_pL8NMeWWk_2.jpg`,
 
@@ -116,6 +119,11 @@ export function yearsWord(count: number): string {
 export function yearsCountLabel(asOf?: Date): string {
   const count = yearsInBusiness(asOf);
   return `${count} ${yearsWord(count)}`;
+}
+
+/** «600+» display label for completed-project milestones. */
+export function projectsCountLabel(): string {
+  return `${business.projectsCompleted}+`;
 }
 
 /** Shared SEO / JSON-LD blurb with current experience length. */

@@ -3,10 +3,10 @@ import { business } from "@/lib/business";
 
 export default function Footer() {
   const navigation = [
-    { name: "О нас", href: "/#about" },
+    { name: "Портфолио", href: "/#portfolio" },
     { name: "Услуги", href: "/#services" },
     { name: "Процесс", href: "/#process" },
-    { name: "Портфолио", href: "/#portfolio" },
+    { name: "О нас", href: "/#about" },
     { name: "Контакты", href: "/#contact" },
   ];
 
