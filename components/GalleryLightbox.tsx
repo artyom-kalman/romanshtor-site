@@ -109,11 +109,8 @@ export default function GalleryLightbox({
         </svg>
       </button>
 
-      {/* Image */}
-      <div
-        className="relative w-full max-w-5xl mx-16 aspect-[4/3]"
-        onClick={(e) => e.stopPropagation()}
-      >
+      {/* Image — tap closes (bubbles to backdrop); swipe still navigates via touch handlers */}
+      <div className="relative w-full max-w-5xl mx-16 aspect-[4/3]">
         <Image
           src={`/images/gallery/${image.filename}`}
           alt={image.alt}
