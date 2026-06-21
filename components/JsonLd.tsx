@@ -1,4 +1,4 @@
-import { business, sameAsUrls } from "@/lib/business";
+import { business, sameAsUrls, salonExperienceDescription } from "@/lib/business";
 
 export default function JsonLd() {
   const structuredData = {
@@ -7,8 +7,7 @@ export default function JsonLd() {
     name: business.displayName,
     alternateName: business.brandName,
     legalName: business.legalName,
-    description:
-      "Купить римские шторы в Хабаровске. Пошив штор и гардин на заказ, карнизы, тюль, солнцезащитные системы. Салон с 20-летним опытом — дизайн, пошив, навеска и монтаж.",
+    description: salonExperienceDescription(),
     url: business.url,
     image: business.logoUrl,
     logo: business.logoUrl,

@@ -77,6 +77,10 @@ export const business = {
     },
   ],
 
+  /** Opening date — used for «N лет на рынке» across the site. */
+  foundedDate: "2003-07-07",
+  foundedYear: 2003,
+
   url: SITE_URL,
   logoUrl: `${SITE_URL}/images/hero/3_pL8NMeWWk_2.jpg`,
 
@@ -86,6 +90,39 @@ export const business = {
     dvhab: "https://www.dvhab.ru/rimskie-shtory/gamarnika-43a-branch-271928",
   },
 } as const;
+
+/** Completed years since `foundedDate` (anniversary-aware). */
+export function yearsInBusiness(asOf: Date = new Date()): number {
+  const founded = new Date(business.foundedDate);
+  let years = asOf.getFullYear() - founded.getFullYear();
+  const anniversary = new Date(
+    asOf.getFullYear(),
+    founded.getMonth(),
+    founded.getDate(),
+  );
+  if (asOf < anniversary) years--;
+  return years;
+}
+
+/** Russian plural for «N год / года / лет». */
+export function yearsWord(count: number): string {
+  const mod10 = count % 10;
+  const mod100 = count % 100;
+  if (mod10 === 1 && mod100 !== 11) return "год";
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 10 || mod100 >= 20)) return "года";
+  return "лет";
+}
+
+export function yearsCountLabel(asOf?: Date): string {
+  const count = yearsInBusiness(asOf);
+  return `${count} ${yearsWord(count)}`;
+}
+
+/** Shared SEO / JSON-LD blurb with current experience length. */
+export function salonExperienceDescription(asOf?: Date): string {
+  const years = yearsInBusiness(asOf);
+  return `Купить римские шторы в Хабаровске. Пошив штор и гардин на заказ, карнизы, тюль, солнцезащитные системы. Салон с ${years}-летним опытом — дизайн, пошив, навеска и монтаж.`;
+}
 
 /** Full single-line postal address (with index when known). */
 export function fullAddress(): string {

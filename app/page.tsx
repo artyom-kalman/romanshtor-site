@@ -2,6 +2,12 @@ import Image from "next/image";
 import PortfolioGallery from "@/components/PortfolioGallery";
 import ContactSection from "@/components/ContactSection";
 import AnimatedSection from "@/components/AnimatedSection";
+import {
+  business,
+  yearsCountLabel,
+  yearsInBusiness,
+  yearsWord,
+} from "@/lib/business";
 
 const MARQUEE_ITEMS = [
   "Римские шторы",
@@ -16,6 +22,7 @@ const MARQUEE_ITEMS = [
 
 const HeroSection = () => {
   const marqueeTrack = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS];
+  const experienceYears = yearsInBusiness();
 
   return (
     <section className="hero" id="hero">
@@ -23,7 +30,7 @@ const HeroSection = () => {
         <div className="hero-text">
           <div className="hero-meta">
             <span className="eyebrow">№ 001 — Ателье</span>
-            <span className="eyebrow">Хабаровск · с 2005</span>
+            <span className="eyebrow">Хабаровск · с {business.foundedYear}</span>
           </div>
 
           <h1 className="hero-h1">
@@ -55,11 +62,11 @@ const HeroSection = () => {
             sizes="(max-width: 900px) 100vw, 50vw"
           />
           <div className="hero-badge">
-            <span className="hero-badge-est">Осн. 2005</span>
+            <span className="hero-badge-est">Осн. {business.foundedYear}</span>
             <span className="hero-badge-fig">
-              <span className="hero-badge-num">20</span>
+              <span className="hero-badge-num">{experienceYears}</span>
               <span className="hero-badge-label">
-                лет
+                {yearsWord(experienceYears)}
                 <br />
                 на рынке
               </span>
@@ -79,7 +86,11 @@ const HeroSection = () => {
   );
 };
 
-const AboutSection = () => (
+const AboutSection = () => {
+  const experienceYears = yearsInBusiness();
+  const experienceLabel = yearsCountLabel();
+
+  return (
   <section className="section" id="about">
     <div className="wrap about">
       <AnimatedSection className="about-text">
@@ -87,10 +98,10 @@ const AboutSection = () => (
           <span className="eyebrow">О нас</span>
         </div>
         <h2 className="display-h2">
-          20 лет в <em>текстильном</em> дизайне интерьеров
+          {experienceLabel} в <em>текстильном</em> дизайне интерьеров
         </h2>
         <p>
-          20 лет мы занимаемся текстильным оформлением интерьеров, используя
+          {experienceLabel} мы занимаемся текстильным оформлением интерьеров, используя
           свою дизайнерскую и производственную базы. За это время был накоплен
           колоссальный опыт, которым мы готовы делиться с каждым нашим клиентом.
         </p>
@@ -117,8 +128,8 @@ const AboutSection = () => (
 
         <div className="about-stats">
           <div className="about-stat">
-            <div className="num">20</div>
-            <div className="lbl">лет работы</div>
+            <div className="num">{experienceYears}</div>
+            <div className="lbl">{yearsWord(experienceYears)} работы</div>
           </div>
           <div className="about-stat">
             <div className="num">600+</div>
@@ -141,7 +152,8 @@ const AboutSection = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 const ServicesSection = () => {
   const services = [

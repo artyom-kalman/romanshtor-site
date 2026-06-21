@@ -20,7 +20,7 @@ export default function Footer() {
             шторы
           </div>
           <p className="ftr-tag">
-            Текстильное оформление интерьеров с 2005 года.{" "}
+            Текстильное оформление интерьеров с {business.foundedYear} года.{" "}
             {business.address.locality}.
           </p>
         </div>

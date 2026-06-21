@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import JsonLd from "@/components/JsonLd";
 import AnalyticsScripts from "@/components/AnalyticsScripts";
+import { salonExperienceDescription } from "@/lib/business";
 
 const tenorSans = Tenor_Sans({
   variable: "--font-display-next",
@@ -26,12 +27,13 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
+const siteDescription = salonExperienceDescription();
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://rimskiestory.ru"),
   title:
     "Римские шторы Хабаровск — купить шторы, пошив на заказ | Салон Римские Шторы",
-  description:
-    "Купить римские шторы в Хабаровске. Пошив штор и гардин на заказ, карнизы, тюль, солнцезащитные системы. Салон с 20-летним опытом — дизайн, пошив, навеска и монтаж.",
+  description: siteDescription,
   keywords: [
     "римские шторы",
     "римские шторы хабаровск",
@@ -52,8 +54,7 @@ export const metadata: Metadata = {
   openGraph: {
     title:
       "Римские шторы Хабаровск — купить шторы, пошив на заказ | Салон Римские Шторы",
-    description:
-      "Купить римские шторы в Хабаровске. Пошив штор и гардин на заказ, карнизы, тюль, солнцезащитные системы. Салон с 20-летним опытом — дизайн, пошив, навеска и монтаж.",
+    description: siteDescription,
     url: "https://rimskiestory.ru",
     siteName: "Салон Римские Шторы",
     images: [
@@ -71,8 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title:
       "Римские шторы Хабаровск — купить шторы, пошив на заказ | Салон Римские Шторы",
-    description:
-      "Купить римские шторы в Хабаровске. Пошив штор и гардин на заказ, карнизы, тюль, солнцезащитные системы. Салон с 20-летним опытом — дизайн, пошив, навеска и монтаж.",
+    description: siteDescription,
     images: ["/images/hero/3_pL8NMeWWk_2.jpg"],
   },
   other: {
