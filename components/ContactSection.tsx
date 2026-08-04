@@ -31,6 +31,26 @@ export default function ContactSection() {
               </div>
 
               <div className="contact-card">
+                <span className="contact-card-lbl">Часы работы</span>
+                <span className="contact-hours">
+                  {business.openingHours.map((h) => (
+                    <span key={h.label} className="contact-hours-row">
+                      <span>{h.label}</span>
+                      <span>
+                        {h.opens}–{h.closes}
+                      </span>
+                    </span>
+                  ))}
+                  {business.closedDays.map((d) => (
+                    <span key={d.label} className="contact-hours-row">
+                      <span>{d.label}</span>
+                      <span>{d.note}</span>
+                    </span>
+                  ))}
+                </span>
+              </div>
+
+              <div className="contact-card">
                 <span className="contact-card-lbl">Телефоны</span>
                 <span className="contact-card-val contact-card-links">
                   <a href={`tel:${business.phone.tel}`}>

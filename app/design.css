@@ -648,6 +648,9 @@ body {
   border-bottom: var(--hairline);
   display: flex; flex-direction: column; gap: 10px;
 }
+.contact-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
 .contact-card-lbl {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -678,6 +681,29 @@ body {
   margin-top: 2px;
   text-transform: none;
   font-weight: 400;
+}
+.contact-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.contact-hours-row {
+  display: grid;
+  grid-template-columns: 3.25rem 1fr;
+  gap: 14px;
+  align-items: baseline;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.contact-hours-row > span:first-child {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .16em;
+  color: var(--muted);
 }
 
 .contact-map {

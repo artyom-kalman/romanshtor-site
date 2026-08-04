@@ -48,7 +48,11 @@ export default function ContactsPage() {
                       {h.label}: {h.opens}–{h.closes}
                     </li>
                   ))}
-                  <li>Вс: по договорённости</li>
+                  {business.closedDays.map((d) => (
+                    <li key={d.label}>
+                      {d.label}: {d.note}
+                    </li>
+                  ))}
                 </ul>
               </div>
 

@@ -1,14 +1,5 @@
 /**
  * Single source of truth for all business / NAP (Name-Address-Phone) data.
- *
- * Every component that renders contact info, legal реквизиты, or JSON-LD
- * structured data MUST import from here — никаких хардкодов NAP в других файлах.
- *
- * NAP values below match the Yandex Business card exactly. Do not change them
- * without updating the Yandex card too — consistency across the web is itself
- * a Yandex "коммерческий фактор" ranking signal.
- *
- * Fields marked `// TODO` are placeholders to be filled in by the owner.
  */
 
 const SITE_URL = "https://rimskiestory.ru";
@@ -76,6 +67,9 @@ export const business = {
       closes: "16:00",
     },
   ],
+
+  /** Closed days — UI only; not emitted to JSON-LD. */
+  closedDays: [{ label: "Вс", note: "выходной" }],
 
   /** Opening date — used for «N лет на рынке» across the site. */
   foundedDate: "2003-07-07",
