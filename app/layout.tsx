@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import JsonLd from "@/components/JsonLd";
 import AnalyticsScripts from "@/components/AnalyticsScripts";
-import { salonExperienceDescription } from "@/lib/business";
+import { business, salonExperienceDescription } from "@/lib/business";
 
 const tenorSans = Tenor_Sans({
   variable: "--font-display-next",
@@ -30,7 +30,7 @@ const jetbrainsMono = JetBrains_Mono({
 const siteDescription = salonExperienceDescription();
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rimskiestory.ru"),
+  metadataBase: new URL(business.url),
   title:
     "Римские шторы Хабаровск — купить шторы, пошив на заказ | Салон Римские Шторы",
   description: siteDescription,
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title:
       "Римские шторы Хабаровск — купить шторы, пошив на заказ | Салон Римские Шторы",
     description: siteDescription,
-    url: "https://rimskiestory.ru",
+    url: business.url,
     siteName: "Салон Римские Шторы",
     images: [
       {

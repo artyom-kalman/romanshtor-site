@@ -10,10 +10,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Existing Yandex Конструктор карт widget already configured for the salon.
-const YANDEX_MAP_SRC =
-  "https://yandex.com/map-widget/v1/?um=constructor%3Aa4a27257b0b4971a32170042c0f44e7106dcbc05b134bdca4a1de3ea0952276c&source=constructor";
-
 export default function ContactsPage() {
   const hours = business.openingHours;
 
@@ -143,7 +139,7 @@ export default function ContactsPage() {
             <div className="md:sticky md:top-24">
               <div className="w-full aspect-square md:aspect-auto md:h-[600px] rounded-lg overflow-hidden border border-gray-200">
                 <iframe
-                  src={YANDEX_MAP_SRC}
+                  src={business.mapEmbedUrl}
                   width="100%"
                   height="100%"
                   className="w-full h-full"

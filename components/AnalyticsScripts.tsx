@@ -1,24 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 
-import Script from "next/script";
-
-export const YM_ID = 109390723;
+import { Suspense } from "react";
+import { YM_ID } from "@/lib/analytics";
+import MetricaPageViews from "./MetricaPageViews";
 
 export default function AnalyticsScripts() {
   if (process.env.NODE_ENV !== "production") return null;
 
   return (
     <>
-      <Script id="yandex-metrica" strategy="afterInteractive">
-        {`
-          (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-          m[i].l=1*new Date();
-          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-          (window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=${YM_ID}', 'ym');
-          ym(${YM_ID}, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-        `}
-      </Script>
+      <Suspense fallback={null}>
+        <MetricaPageViews />
+      </Suspense>
       <noscript>
         <div>
           <img

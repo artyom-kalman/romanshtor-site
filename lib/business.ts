@@ -42,6 +42,9 @@ export const business = {
   },
 
   email: "romanshtor@rambler.ru",
+  timeZone: "Asia/Vladivostok",
+  mapEmbedUrl:
+    "https://yandex.com/map-widget/v1/?um=constructor%3Aa4a27257b0b4971a32170042c0f44e7106dcbc05b134bdca4a1de3ea0952276c&source=constructor",
 
   /** Approximate coordinates of Гамарника, 43А. */
   geo: {
@@ -88,16 +91,23 @@ export const business = {
   },
 } as const;
 
-/** Completed years since `foundedDate` (anniversary-aware). */
+const salonDateFormatter = new Intl.DateTimeFormat("en", {
+  timeZone: business.timeZone,
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+});
+
+/** Completed years on the salon's local calendar, independent of the build host. */
 export function yearsInBusiness(asOf: Date = new Date()): number {
-  const founded = new Date(business.foundedDate);
-  let years = asOf.getFullYear() - founded.getFullYear();
-  const anniversary = new Date(
-    asOf.getFullYear(),
-    founded.getMonth(),
-    founded.getDate(),
+  const { year, month, day } = Object.fromEntries(
+    salonDateFormatter.formatToParts(asOf).map(({ type, value }) => [type, Number(value)]),
   );
-  if (asOf < anniversary) years--;
+  const [foundedYear, foundedMonth, foundedDay] = business.foundedDate
+    .split("-")
+    .map(Number);
+  let years = year - foundedYear;
+  if (month < foundedMonth || (month === foundedMonth && day < foundedDay)) years--;
   return years;
 }
 
