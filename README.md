@@ -71,6 +71,6 @@ After deployment, check all three pages directly, the footer links, `/robots.txt
 
 Business details, opening hours, founding date, site URL, and map URL live in `lib/business.ts`. Keep public copy in Russian. Years in business use the salon's timezone. Because the site is exported statically, rebuild after the July 7 anniversary to refresh generated copy and metadata.
 
-Yandex Metrica counter `109390723` runs in production builds only. The existing phone, email, and messenger goals are configured in Metrica. See [analytics verification](docs/analytics.md) for the confirmed baseline and remaining live checks. Opening a production preview can send real analytics; use the automated browser tests for isolated checks.
+Yandex Metrica counter `109390723` runs in production builds only. The existing phone, email, and messenger goals are configured in Metrica. See the linked Notion project and maintenance issue for the confirmed baseline and remaining live checks. Opening a production preview can send real analytics; use the automated browser tests for isolated checks.
 
 Contributor guidance is in [AGENTS.md](AGENTS.md). Project decisions and current maintenance work are tracked in the linked Notion project and issue.
