@@ -1,9 +1,6 @@
 import { business } from "@/lib/business";
 import AnimatedSection from "./AnimatedSection";
 
-const YANDEX_MAP_SRC =
-  "https://yandex.com/map-widget/v1/?um=constructor%3Aa4a27257b0b4971a32170042c0f44e7106dcbc05b134bdca4a1de3ea0952276c&source=constructor";
-
 export default function ContactSection() {
   return (
     <section className="section section-alt" id="contact">
@@ -99,7 +96,7 @@ export default function ContactSection() {
 
             <div className="contact-map">
               <iframe
-                src={YANDEX_MAP_SRC}
+                src={business.mapEmbedUrl}
                 title="Карта расположения салона Римские Шторы"
                 loading="lazy"
               />

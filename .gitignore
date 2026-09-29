@@ -12,6 +12,8 @@
 
 # testing
 /coverage
+/playwright-report/
+/test-results/
 
 # next.js
 /.next/
@@ -41,5 +43,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# design mockup scratch uploads (dupes/screenshots, not used by the mockup)
+# Preserve local uploads from the retired prototype without committing them.
 docs/design/uploads/

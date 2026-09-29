@@ -1,14 +1,15 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from "next";
+import { business } from "@/lib/business";
 
-export const dynamic = 'force-static'
+export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
-      userAgent: '*',
-      allow: '/',
+      userAgent: "*",
+      allow: "/",
     },
-    sitemap: 'https://rimskiestory.ru/sitemap.xml',
-    host: 'https://rimskiestory.ru',
-  }
+    sitemap: `${business.url}/sitemap.xml`,
+    host: business.url,
+  };
 }
