@@ -1,6 +1,9 @@
-# Roman Curtains Salon website
+# Римские шторы | Roman Curtains
 
-Russian-language website for «Римские шторы», a custom curtains and interior textiles salon in Khabarovsk.
+A website for a curtain and interior textiles salon in Khabarovsk. Browse finished interiors, explore custom curtain options, and book a consultation.
 
-- Website: https://rimskiestory.ru/
-- Stack: Next.js App Router, React, TypeScript, Tailwind CSS.
+[Visit the website](https://rimskiestory.ru/)
+
+![Website homepage](docs/images/homepage.png)
+
+![Portfolio section](docs/images/portfolio.png)
