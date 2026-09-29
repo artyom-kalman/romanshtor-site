@@ -38,7 +38,7 @@ pnpm exec playwright install chromium
 pnpm test:e2e         # Browser checks against the exported site
 ```
 
-The browser suite starts its own server on port 3000. Stop other local servers on that port first. It replaces Metrica with a stub and blocks other external requests, so test visits do not enter production analytics. CI runs these checks on pushes and pull requests.
+The browser suite starts its own server on port 3000. Stop other local servers on that port first. It replaces Metrica with a stub and blocks other external requests, so test visits do not enter production analytics. CI runs these checks on pull requests and pushes to `master`, avoiding duplicate runs on PR branches.
 
 ## Preview and deployment
 
