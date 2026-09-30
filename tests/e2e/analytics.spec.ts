@@ -11,6 +11,8 @@ function captureMetricaRequests(page: Page) {
 
 async function expectMetricaDisabled(page: Page, requests: string[]) {
   await page.waitForLoadState("load");
+  // Observe late hydration/afterInteractive work before asserting no tracking.
+  await page.waitForTimeout(1000);
   await expect(page.locator("#yandex-metrica")).toHaveCount(0);
   await expect(page.locator('img[src*="mc.yandex."]')).toHaveCount(0);
   expect(await page.evaluate(() => typeof window.ym)).toBe("undefined");
@@ -47,7 +49,7 @@ test("navigation and contact links work without enabling Metrica", async ({ page
   await page.evaluate(() => window.history.pushState(null, "", "?source=review"));
   await expectMetricaDisabled(page, requests);
   await page.getByRole("link", { name: "Политика конфиденциальности" }).click();
-  await expect(page.getByText("Счётчик Яндекс Метрики на сайте отключён.", { exact: false })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Политика в отношении обработки персональных данных", exact: true })).toBeVisible();
   await expectMetricaDisabled(page, requests);
   await page.goBack();
   await expect(page).toHaveURL(/\/contacts\/\?source=review$/);
