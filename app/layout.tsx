@@ -6,7 +6,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import JsonLd from "@/components/JsonLd";
-import AnalyticsScripts from "@/components/AnalyticsScripts";
 import { business, salonExperienceDescription } from "@/lib/business";
 
 const tenorSans = Tenor_Sans({
@@ -95,7 +94,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <FloatingWhatsApp />
-        <AnalyticsScripts />
+        {/* Metrica is paused pending RKN notification and a lawful analytics setup. */}
       </body>
     </html>
   );

@@ -23,7 +23,7 @@ export default function PrivacyPage() {
             Политика в отношении обработки персональных данных
           </h1>
           <p className="text-muted mb-10">
-            Редакция от&nbsp;08.06.2026 г.
+            Редакция от&nbsp;30.09.2026 г.
           </p>
 
           <div className="prose-custom space-y-6 text-muted leading-relaxed">
@@ -99,11 +99,6 @@ export default function PrivacyPage() {
                   иные данные, добровольно сообщённые Пользователем в сообщении.
                 </li>
               </ul>
-              <p>
-                Также на сайте происходит сбор и обработка обезличенных данных о
-                посетителях (в том числе файлов cookie) с помощью сервисов
-                интернет-статистики (Яндекс Метрика и др.).
-              </p>
             </div>
 
             <div>
